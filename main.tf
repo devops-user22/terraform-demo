@@ -1,11 +1,6 @@
-
-variable "terraform_workspace" {
-  description = "The current Terraform workspace"
-  default     = "default"
-}
-
-locals {
-  variables_file = "${terraform.workspace}.tfvars"
+variable "bucketname" {
+  description = "Name of the S3 bucket"
+  type        = string
 }
 
 
