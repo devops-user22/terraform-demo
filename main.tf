@@ -8,7 +8,14 @@ locals {
   variables_file = "${terraform.workspace}.tfvars"
 }
 
-
+terraform {
+  backend "remote" {
+    organization = "Integrant"
+    workspaces {
+      name = "terraform-demo"
+    }
+  }
+}
 
 # Load the appropriate variables file based on the workspace
 data "terraform_remote_state" "variables" {
