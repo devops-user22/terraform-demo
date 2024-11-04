@@ -4,15 +4,6 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 5.0"
     }
-  }
-}
-
-provider "aws" {
-  region  = var.aws_region
-    access_key = "AKIAVYV5Z3DTRUDTV4QU"
-    secret_key = "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"
-}
-terraform { 
   cloud { 
     
     organization = "Integrant" 
@@ -21,5 +12,13 @@ terraform {
       name = "terraform-demo" 
     } 
   } 
+  }
 }
+
+provider "aws" {
+  region  = var.aws_region
+    access_key = "AKIAVYV5Z3DTRUDTV4QU"
+    secret_key = "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"
+}
+
 
