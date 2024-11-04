@@ -1,26 +1,25 @@
 terraform {
-  backend "remote" {
-    organization = "your-organization"
-    workspaces {
-      name = "your-workspace"
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
     }
   }
 }
 
-
-resource "tfe_workspace" "workspace" {
-  name                = "terraform-demo"
-  organization        = "Integrant"
-  auto_apply          = false
-  global_remote_state = true
-  queue_all_runs      = false
-  working_directory   = "terraform"
-  trigger_prefixes    = ["terraform/*"]
-  project_id          = ""
- 
-  vcs_repo {
-    identifier     = ""
-    branch         = ""
-    oauth_token_id = "redacted"
-  }
+provider "aws" {
+  region  = var.aws_region
+    access_key = "AKIAVYV5Z3DTRUDTV4QU"
+    secret_key = "e/ZsR+t7AAFT9joL09oKEmWpHmKNdWJ2RZETC51h"
 }
+terraform { 
+  cloud { 
+    
+    organization = "Integrant" 
+
+    workspaces { 
+      name = "terraform-demo" 
+    } 
+  } 
+}
+
