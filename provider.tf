@@ -6,7 +6,7 @@ required_providers {
     }
 
   }
-  cloud "terraform" { 
+  cloud { 
     
     organization = "Integrant" 
     workspaces { 
