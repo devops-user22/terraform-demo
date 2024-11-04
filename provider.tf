@@ -4,6 +4,8 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 5.0"
     }
+
+  }
   cloud { 
     
     organization = "Integrant" 
@@ -12,7 +14,6 @@ terraform {
       name = "terraform-demo" 
     } 
   } 
-  }
 }
 
 provider "aws" {
