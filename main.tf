@@ -1,11 +1,4 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
-}
+
 variable "terraform_workspace" {
   description = "The current Terraform workspace"
   default     = "default"
