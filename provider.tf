@@ -6,7 +6,7 @@ terraform {
     }
 
   }
-  cloud { 
+  cloud "terraform" { 
     
     organization = "Integrant" 
 
