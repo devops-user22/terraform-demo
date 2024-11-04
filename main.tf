@@ -21,5 +21,5 @@ data "terraform_remote_state" "variables" {
   }
 }
 resource "aws_s3_bucket" "neuro-ace-services" {
-  bucket = vars.buketname
+  bucket = var.buketname
 }
