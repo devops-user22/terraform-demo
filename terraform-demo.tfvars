@@ -1,1 +1,1 @@
-bucketname = "prodbucket136245284"
+bucketname = "amrbucket27462482"
