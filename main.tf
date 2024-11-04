@@ -10,5 +10,5 @@ locals {
 
 
 resource "aws_s3_bucket" "neuro-ace-services" {
-  bucket = var.buketname
+  bucket = var.bucketname
 }
