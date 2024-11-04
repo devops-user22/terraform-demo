@@ -1,3 +1,13 @@
+terraform {
+  backend "remote" {
+    organization = "your-organization"
+    workspaces {
+      name = "your-workspace"
+    }
+  }
+}
+
+
 resource "tfe_workspace" "workspace" {
   name                = "terraform-demo"
   organization        = "Integrant"
