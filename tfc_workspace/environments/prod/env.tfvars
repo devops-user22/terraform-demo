@@ -1,7 +1,7 @@
 environment_name = "prod"
 
 aws_region = "us-west-2"
-
+bucketname = "welbucket27462482"
 # Database
 neuro-ace-rds_DB_username                = "admin"
 neuro-ace-rds_DB_name                    = "ORCL"
