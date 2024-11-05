@@ -16,10 +16,3 @@ resource "tfe_workspace" "workspace" {
 }
 
 
-
-  resource "tfe_variable" "environment" {
-  category     = "env"
-  key          = "TF_CLI_ARGS_plan"
-  value        = "-var-file='stage.tfvars'"
-  workspace_id = tfe_workspace.workspace.id
-}

@@ -44,10 +44,11 @@ resource "tfe_variable" "vcs_repo" {
   workspace_id = tfe_workspace.workspace.id
 }
 
-resource "tfe_variable" "workspace_env_vars" {
+
+  resource "tfe_variable" "environment" {
   category     = "env"
   key          = "TF_CLI_ARGS_plan"
-  value        = var.tf_cli_args_plan
+  value        = "-var-file='stage.tfvars'"
   workspace_id = tfe_workspace.workspace.id
 }
 
