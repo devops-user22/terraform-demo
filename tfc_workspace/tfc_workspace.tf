@@ -3,7 +3,7 @@
 ###########################
 
 resource "tfe_workspace" "workspace" {
-  name                = "stage"
+  name                = "test"
   organization        = "Integrant"
   auto_apply          = false
   global_remote_state = true
